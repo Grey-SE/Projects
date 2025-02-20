@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmers 2025</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">Programmers 2025</h1>
+        <p id="description">A Simple Guide to Programming</p>
+      </header>
+      <main class="main">
+        <form method="POST" action="" id="survey-form">
+          <section class="demographic">
+            <div class="name">
+              <label for="name" id="name-label"
+                >Name:<input type="text" placeholder="" id="name" required
+              /></label>
+            </div>
+            <div class="email">
+              <label for="email" id="email-label"
+                >Email:
+                <input type="email" placeholder="" id="email" required /></label
+            ></div>
+            <div class="number">
+              <label for="number" id="number-label"
+                >Number:
+                <input
+                  type="number"
+                  inputmode="numeric"
+                  placeholder=""
+                  id="number"
+                  min="0"
+                  max="99999999999"
+                  required /></label></div
+          ></section>
+          <section class="question">
+            <div class="mastery">
+              <label for="dropdown">
+                What level is your mastery in terms of coding? <br />
+                <select name="dropdown" id="dropdown">
+                  <option value="">(Select One)</option>
+                  <option value="1">No experience</option>
+                  <option value="2">Beginner</option>
+                  <option value="3">Intermediate</option>
+                  <option value="4">Expert</option>
+                </select>
+              </label>
+            </div>
+            <div class="type-of-programmer">
+              <legend>Which are you?</legend>
+              <label for="front-end"
+                ><input
+                  type="radio"
+                  class="front-end inline"
+                  value="front-end inline"
+                  checked
+                  name="programmer"
+                />Front End</label
+              >
+              <label for="back-end"
+                ><input
+                  type="radio"
+                  class="back-end inline"
+                  value="back-end"
+                  name="programmer"
+                />Back End</label
+              >
+            </div>
+            <div class="languages">
+              <legend
+                >Which languages do you know? (select all that applies)</legend
+              >
+              <label for="input-checkbox"
+                ><input
+                  type="checkbox"
+                  class="input-checkbox inline"
+                  value="c"
+                />C</label
+              >
+              <label for="input-checkbox"
+                ><input
+                  type="checkbox"
+                  class="input-checkbox inline"
+                  value="c#"
+                />C#</label
+              >
+
+              <label for="input-checkbox"
+                ><input
+                  type="checkbox"
+                  class="input-checkbox inline"
+                  value="java"
+                />Java</label
+              >
+              <label for="input-checkbox"
+                ><input
+                  type="checkbox"
+                  class="input-checkbox inline"
+                  value="javascript"
+                />Javascript</label
+              >
+              <label for="input-checkbox"
+                ><input
+                  type="checkbox"
+                  class="input-checkbox inline"
+                  value="Python"
+                />Python</label
+              >
+              <label for="input-checkbox "
+                ><input
+                  type="checkbox"
+                  class="input-checkbox inline"
+                  value="sql"
+                />SQL</label
+              >
+            </div>
+            <div class="experience">
+              <label for="bio"
+                >Provide a short essay:
+                <textarea
+                  id="bio"
+                  name="bio"
+                  rows="3"
+                  cols="30"
+                  placeholder="I like coding because..."
+                ></textarea>
+              </label>
+            </div> </section
+          ><button class="btn" type="submit" id="submit">Submit</button>
+        </form>
+      </main> </div
+    ><footer>Copyright 2025</footer>
+  </body>
+</html>

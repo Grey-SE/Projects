@@ -1,0 +1,85 @@
+body {
+  background-color: #e8f7ce;
+  margin: 0 auto;
+  width: 800px;
+  height: 110vh;
+  padding: 20px;
+  font-family: Tahoma;
+}
+
+.container {
+  background-color: #170831;
+  color: #e8f7ce;
+  margin: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  height: 100px;
+}
+
+h1,
+p {
+  background-color: #e8f7ce;
+  color: #170831;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h1 {
+  padding-bottom: 0;
+}
+
+form {
+  background-color: #e8f7ce;
+  color: #170831;
+  width: 100vw;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.demographic,
+.question {
+  border-bottom: 5px solid #170831;
+  padding-bottom: 5px;
+}
+
+input,
+textarea {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.btn {
+  display: block;
+  width: 20%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: wheat;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}

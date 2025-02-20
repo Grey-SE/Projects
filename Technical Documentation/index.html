@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Multimeter</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Parts_of_a_Multimeter"
+        >Parts of a Multimeter</a
+      >
+      <a class="nav-link" href="#Probe_Types">Probe Types</a>
+      <a class="nav-link" href="#Basic_steps_for_measuring_different_values"
+        >Basic steps for measuring different values</a
+      >
+      <a class="nav-link" href="#Measuring_Voltage">Measuring Voltage</a>
+      <a class="nav-link" href="#Measuring_Current">Measuring Current</a>
+      <a class="nav-link" href="#Measuring_Resistance">Measuring Resistance</a>
+      <a class="nav-link" href="#Checking_Continuity">Checking Continuity</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction"
+        ><header>Introduction</header>
+        <p
+          >So... how do I use a multimeter? This tutorial will show you how to
+          use a digital multimeter (DMM), an indispensable tool that you can use
+          to diagnose circuits, learn about other people's electronic designs,
+          and even test a battery. Hence the 'multi'-'meter' (multiple
+          measurement) name.</p
+        >
+        <p
+          >The most basic things we measure are voltage and current. A
+          multimeter is also great for some basic sanity checks and
+          troubleshooting. Is your circuit not working? Does the switch work?
+          Put a meter on it! The multimeter is your first defense when
+          troubleshooting a system. In this tutorial we will cover measuring
+          voltage, current, resistance and continuity.</p
+        >
+      </section>
+      <section class="main-section" id="Parts_of_a_Multimeter"
+        ><header>Parts of a Multimeter</header>
+        <ul>
+          <li>Display </li>
+          <p
+            >The <strong>display</strong> usually has four digits and the
+            ability to display a negative sign. A few multimeters have
+            illuminated displays for better viewing in low light situations.</p
+          >
+          <li>Selection Knob</li>
+          <p
+            >The <strong>selection knob</strong> allows the user to set the
+            multimeter to read different things such as milliamps (mA) of
+            current, voltage (V) and resistance (Ω).</p
+          >
+          <li>Ports</li>
+          <p
+            >Two probes are plugged into two of the <strong>ports</strong> on
+            the front of the unit. <strong>COM</strong> stands for common and is
+            almost always connected to Ground or ‘-’ of a circuit. The
+            <strong>COM</strong> probe is conventionally black but there is no
+            difference between the red probe and black probe other than color.
+            <strong>10A</strong> is the special port used when measuring large
+            currents (greater than 200mA). <strong>mAVΩ</strong> is the port
+            that the red probe is conventionally plugged in to. This port allows
+            the measurement of current (up to 200mA), voltage (V), and
+            resistance (Ω). The probes have a <i>banana</i> type connector on
+            the end that plugs into the multimeter. Any probe with a banana plug
+            will work with this meter. This allows for different types of probes
+            to be used.</p
+          >
+        </ul>
+      </section>
+      <section class="main-section" id="Probe_Types"
+        ><header>Probe Types</header>
+        <ul>
+          <li
+            >Banana to Alligator Clips: These are great cables for connecting to
+            large wires or pins on a breadboard. Good for performing longer term
+            tests where you don’t have to have to hold the probes in place while
+            you manipulate a circuit.</li
+          >
+          <li
+            >Banana to IC Hook: IC hooks work well on smaller ICs and legs of
+            ICs.</li
+          >
+          <li
+            >Banana to Tweezers: Tweezers are handy if you are needing to test
+            SMD components.</li
+          >
+          <li
+            >Banana to Test Probes: If you ever break a probe, they are cheap to
+            replace!</li
+          >
+        </ul>
+      </section>
+      <section
+        class="main-section"
+        id="Basic_steps_for_measuring_different_values"
+        ><header>Basic steps for measuring different values</header>
+        <code>Measuring Voltage<br /></code>
+        <code>Measuring Current<br /></code>
+        <code>Measuring Resistance<br /></code>
+        <code>Checking Continuity<br /></code>
+      </section>
+      <section class="main-section" id="Measuring_Voltage"
+        ><header>Measuring Voltage</header>
+        <p
+          >To start, let's measure voltage on a AA battery: Plug the black probe
+          into COM and the red probe into mAVΩ. Set the multimeter to "2V" in
+          the DC (direct current) range. Almost all portable electronics use
+          direct current, not alternating current. Connect the black probe to
+          the battery's ground or '-' and the red probe to power or '+'. Squeeze
+          the probes with a little pressure against the positive and negative
+          terminals of the AA battery. If you've got a fresh battery, you should
+          see around 1.5V on the display (this battery is brand new, so its
+          voltage is slightly higher than 1.5V).</p
+        >
+        <p
+          >If you're measuring DC voltage (such as a battery or a sensor hooked
+          up to an Arduino) you want to set the knob where the V has a straight
+          line. AC voltage (like what comes out of the wall) can be dangerous,
+          so we rarely need to use the AC voltage setting (the V with a wavy
+          line next to it). If you're messing with AC, we recommend you get a
+          non-contact tester rather than use a digital multimeter.</p
+        >
+        <p
+          >What happens if you switch the red and black probes? The reading on
+          the multimeter is simply negative. Nothing bad happens! The multimeter
+          measures voltage in relation to the common probe. How much voltage is
+          there on the ‘+’ of the battery compared to common or the negative
+          pin? 1.5V. If we switch the probes, we define ‘+’ as the common or
+          zero point. How much voltage is there on the ‘-’ of the battery
+          compared to our new zero? -1.5V!</p
+        >
+        <p
+          >Now let's construct a simple circuit to demonstrate how to measure
+          voltage in a real world scenario. The circuit is simply a 1kΩ and a
+          Blue super bright LED powered with a SparkFun Breadboard Power Supply
+          Stick. To begin, let's make sure the circuit you are working on is
+          powered up correctly. If your project should be at 5V but is less than
+          4.5V or greater than 5.5V, this would quickly give you an indication
+          that something is wrong and you may need to check your power
+          connections or the wiring of your circuit.</p
+        >
+        <code class="warning"
+          >Warning! In general, stick to DC circuits (the settings on the
+          multimeter with straight lines, not curvy lines). Most multimeters can
+          measure AC (alternating current) systems, but AC circuits can be
+          dangerous. A wall outlet with AC or 'main voltage' is the stuff that
+          can zap you pretty good. VERY carefully respect AC. If you need to
+          check to see if an outlet is 'on' then use a AC tester. Really the
+          only times we've needed to measure AC are when we've got an outlet
+          that is acting funny (is it really at 110V?), or if we're trying to
+          control a heater (such as a hot plate). Go slow and double check
+          everything before you test an AC circuit.</code
+        >
+      </section>
+      <section class="main-section" id="Measuring_Current"
+        ><header>Measuring Current</header>
+        <p
+          >Reading current is one of the trickiest and most insightful readings
+          in the world of embedded electronics. It's tricky because you have to
+          measure current in series. Where voltage is measure by poking at VCC
+          and GND (in parallel), to measure current you have to physically
+          interrupt the flow of current and put the meter in-line. To
+          demonstrate this, we'll use the same circuit we used in the measuring
+          voltage section.</p
+        >
+        <p
+          >The first thing we'll need is an extra piece of wire. As mentioned,
+          we'll need to physically interrupt the circuit to measure the current.
+          Said another way, pull out the VCC wire going to the resistor, add a
+          wire where that wire was connected, and then probe from the power pin
+          on the power supply to the resistor. This effectively "breaks" power
+          to the circuit. We then insert the multimeter in-line so that it can
+          measure the current as it "flows" through to the multimeter into the
+          bread board.</p
+        >
+        <p
+          >With the multimeter connected, we can now set the dial to the proper
+          setting and measure some current. Measuring current works the same as
+          voltage and resistance -- you have to get the correct range. Set the
+          multimeter to 200mA, and work from there. The current consumption for
+          many breadboard projects is usually under 200mA. Make sure the red
+          probe is plugged into the 200mA fused port. On our favorite
+          multimeter, the 200mA hole is the same port/hole as voltage and
+          resistance reading (the port is labeled mAVΩ). This means you can keep
+          the red probe in the same port to measure current, voltage, or
+          resistance. However, if you suspect that your circuit will be using
+          close to or more than 200mA, switch your probe to the 10A side, just
+          to be safe. Overloading the current can result in a blown fuse rather
+          than just an overload display. More on that in a bit.</p
+        >
+        <code class="remember"
+          >Remember! When you're done using the meter, always return the meter
+          to read voltage (return the probes to the voltage port, set the meter
+          to read the DC voltage range if necessary). It's common to grab a
+          meter and begin to quickly measure the voltage between two pins. If
+          you have left your meter in 'current' mode, you won't see the voltage
+          on the display. Instead you'll see '0.000' indicating that there is no
+          current between VCC and GND. Within that split second you will have
+          connected VCC to GND through your meter and the 200mA fuse will blow =
+          not good. So before you put the meter down for the night, remember to
+          leave your meter in a friendly state.</code
+        >
+      </section>
+      <section class="main-section" id="Measuring_Resistance"
+        ><header>Measuring Resistance</header>
+        <p
+          >Normal resistors have color codes on them. If you don't know what
+          they mean, that's ok! There are plenty of online calculators that are
+          easy to use. However, if you ever find yourself without internet
+          access, a multimeter is very handy at measuring resistance.</p
+        >
+        <p
+          >Pick out a random resistor and set the multimeter to the 20kΩ
+          setting. Then hold the probes against the resistor legs with the same
+          amount of pressure you when pressing a key on a keyboard.
+        </p>
+        <p
+          >As a rule of thumb, it's rare to see a resistor less than 1 Ohm.
+          Remember that measuring resistance is not perfect. Temperature can
+          affect the reading a lot. Also, measuring resistance of a device while
+          it is physically installed in a circuit can be very tricky. The
+          surrounding components on a circuit board can greatly affect the
+          reading.</p
+        >
+      </section>
+      <section class="main-section" id="Checking_Continuity"
+        ><header>Checking Continuity</header>
+        <p
+          >Continuity testing is the act of testing the resistance between two
+          points. If there is very low resistance (less than a few Ωs), the two
+          points are connected electrically, and a tone is emitted. If there is
+          more than a few Ωs of resistance, than the circuit is open, and no
+          tone is emitted. This test helps insure that connections are made
+          correctly between two points. This test also helps us detect if two
+          points are connected that should not be.</p
+        >
+        <p
+          >Continuity is quite possibly the single most important function for
+          embedded hardware gurus. This feature allows us to test for
+          conductivity of materials and to trace where electrical connections
+          have been made or not made.</p
+        >
+        <p
+          >Set the multimeter to 'Continuity' mode. It may vary among DMMs, but
+          look for a diode symbol with propagation waves around it (like sound
+          coming from a speaker).</p
+        >
+        <p
+          >Now touch the probes together. The multimeter should emit a tone
+          (Note: Not all multimeters have a continuity setting, but most
+          should). This shows that a very small amount of current is allowed to
+          flow without resistance (or at least a very very small resistance)
+          between probes.</p
+        >
+        <code class="warning"
+          >Warning! In general, turn OFF the system before checking for
+          continuity.</code
+        >
+      </section>
+    </main>
+  </body>
+</html>

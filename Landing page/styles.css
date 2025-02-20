@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Header Styles */
+#header {
+  background-color: #222;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#header-img {
+  height: 60px;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  background-color: #00bcd4;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 188, 212, 0.3);
+}
+
+/* Form Styles */
+#form {
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  margin: 100px auto 20px; /* Adjusted margin to add a gap between navbar and form */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #00bcd4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #008ba3;
+}
+
+/* About Section */
+#about {
+  padding: 50px;
+  background-color: #ffffff;
+  margin-top: 80px;
+}
+
+.description {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Products Section */
+#prices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 80px;
+}
+
+.xbox,
+.switch,
+.playstation {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.xbox img,
+.switch img,
+.playstation img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.price-h2 {
+  color: #333;
+}
+
+.price-p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer i {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #prices {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .xbox,
+  .switch,
+  .playstation {
+    max-width: 90%;
+  }
+}
